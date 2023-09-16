@@ -7,6 +7,9 @@ import weinber.bank.accountmanager.entity.Account;
 import weinber.bank.accountmanager.repository.AccountRepository;
 import weinber.bank.accountmanager.service.converter.AccountConverter;
 
+import java.util.List;
+import java.util.UUID;
+
 @Service
 @AllArgsConstructor
 public class AccountService {
@@ -18,6 +21,10 @@ public class AccountService {
     public Account saveAccountFromDTO(AccountDTO accountDTO) {
         Account account = accountConverter.convertAccountDTO(accountDTO);
         return saveAccount(account);
+    }
+
+    public List<Account> getAccountsByCustomerUuid(UUID customerUuid) {
+        return accountRepository.findAllByCustomerUuid(customerUuid);
     }
 
     private Account saveAccount(Account account) {
