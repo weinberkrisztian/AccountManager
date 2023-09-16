@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AccountController {
 
     @PostMapping("/account")
-    public String accountByCustomerId(@RequestBody String id) {
-        return "Successful invocation with id: " + id;
+    public String accountByCustomerId(@RequestBody String body) {
+        return "Successful invocation with body: " + body;
     }
 }
