@@ -1,13 +1,8 @@
 server:
   port: 8081
-
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/account-manager
     username: weinber
     password: weinber
     driver-class-name: org.postgresql.Driver
-#  jpa:
-#    hibernate:
-#      ddl-auto: update
-
