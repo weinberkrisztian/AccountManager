@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-  db:
+  account_db:
     image: postgres:14-alpine
     restart: always
     environment:
@@ -12,4 +12,6 @@ services:
     expose:
       - '5432'
     volumes:
-      - ~/apps/postgres:/var/lib/postgresql/data
+      - account:/var/lib/postgresql/data
+volumes:
+  account:
