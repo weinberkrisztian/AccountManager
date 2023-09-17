@@ -27,6 +27,6 @@ public class Account {
     private String accountType;
     @Column(name = "branch_address")
     private String branchAddress;
-    @Column(name = "create_date")
+    @Column(name = "create_date", updatable = false)
     private Instant createDate;
 }
