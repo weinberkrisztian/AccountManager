@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import java.time.Instant;
-import java.util.Optional;
 import java.util.UUID;
 
 @Getter
